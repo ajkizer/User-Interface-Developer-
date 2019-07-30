@@ -4,5 +4,186 @@
   background-repeat: no-repeat;
   height: 100vh;
   background-position: center;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
+}
+
+.hero {
+  .flex(row, center, center, nowrap);
+  z-index: 0;
+  margin: 0 8%;
+
+  .form-section {
+    width: 50%;
+
+    .form {
+      width: 40rem;
+      height: 48rem;
+      background: @form-color;
+      margin-top: 8%;
+      border-radius: 20px;
+      .flex(column, flex-start, center, nowrap);
+      box-shadow: 4px 3px 14px 0px rgba(0, 0, 0, 0.7);
+
+      .form-header {
+        margin-top: 10%;
+        h2 {
+          font-size: 2rem;
+          font-family: @montserrat;
+          font-weight: bold;
+          color: @charcoal;
+          text-align: center;
+          color: darken(@graphite, 10%);
+        }
+        h3 {
+          font-size: 1.5rem;
+          font-family: @montserrat;
+          color: lighten(@charcoal, 10%);
+        }
+      }
+
+      input[type="text"] {
+        .form-font();
+      }
+
+      input[type="email"] {
+        .form-font();
+      }
+
+      input[type="password"] {
+        .form-font();
+      }
+
+      .input-section {
+        .flex(column, center, center, nowrap);
+        margin: 5% auto 0;
+
+        .name-section {
+          .flex(row, space-around, center, nowrap);
+          margin-bottom: 5%;
+
+          input {
+            margin: 1rem 2%;
+            padding-left: 0.5rem;
+            height: 2.5rem;
+            width: 16rem;
+            border-radius: 3px;
+            border: none;
+            ::placeholder {
+              opacity: 0.3;
+            }
+          }
+        }
+
+        .login-input {
+          .flex(column, center, flex-start, nowrap);
+
+          input {
+            margin: 1rem auto;
+            padding-left: 0.5rem;
+            height: 2.5rem;
+            width: 34rem;
+            border-radius: 3px;
+            border: none;
+          }
+        }
+
+        .button {
+          background: @candycorn;
+          width: 15rem;
+          height: 3rem;
+          border-radius: 3px;
+          text-decoration: none;
+          .flex(row, center, center, nowrap);
+          margin-top: 5%;
+
+          a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: @flat-white;
+            font-family: @roboto;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-text {
+    font-family: @montserrat;
+    margin-bottom: 20%;
+    h1 {
+      font-size: 5.5rem;
+      font-weight: bold;
+      color: @flat-white;
+    }
+
+    h3 {
+      font-size: 6.5rem;
+      font-weight: bold;
+      color: @flat-white;
+    }
+  }
+}
+
+.benefits {
+  height: 75vh;
+  background: @flat-white;
+  .flex(row, space-around, center, nowrap);
+  margin: 0 8%;
+
+  .benefit-card {
+    width: 30%;
+    height: 45%;
+    margin: 0 2%;
+    .flex(column, space-between, center, nowrap);
+
+    .benefit-text {
+      .flex(column, center, center, nowrap);
+      padding-top: 5%;
+      h3 {
+        font-size: 2.1rem;
+        font-weight: bold;
+        font-family: @montserrat;
+        text-align: center;
+        padding-bottom: 3%;
+      }
+      p {
+        font-size: 1.5rem;
+        font-family: @montserrat;
+        text-align: center;
+        padding-bottom: 2%;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.testimonials {
+  height: 75vh;
+  background: @charcoal;
+}
+
+.features {
+  height: 75vh;
+  background: @flat-white;
+}
+
+.cta {
+  height: 90vh;
+  background: @charcoal;
+}
+
+footer {
+  height: 10vh;
+  background: black;
+}
+
+.testimonials {
+  .carousel-item {
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
 }

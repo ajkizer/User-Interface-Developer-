@@ -41,51 +41,34 @@
           <a href="#">Sign Up</a>
         </div>
       </nav>
-      <section class="hero">
+      <section class="hero" id="#hero">
         <div class="form-section">
           <form class="form" autocomplete="off" action="...">
             <div class="form-header">
               <h2>Create your profile now for free</h2>
             </div>
-            <div class="input-section">
-              <div class="name-section">
-                <input
-                  type="text"
-                  name="first-name"
-                  autocomplete="off"
-                  placeholder="First Name"
-                />
-                <input
-                  type="text"
-                  name="last-name"
-                  autocomplete="off"
-                  placeholder="Last Name"
-                />
-              </div>
-
-              <div class="login-input">
-                <label for="username"></label>
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  autocomplete="off"
-                />
-                <input type="email" autocomplete="off" placeholder="Email" />
-                <input
-                  type="password"
-                  autocomplete="off"
-                  placeholder="Password"
-                />
-                <input
-                  type="password"
-                  autocomplete="off"
-                  placeholder="Confirm Password"
-                />
-              </div>
-              <div class="button">
-                <a href="#">Create Account</a>
-              </div>
+            <div class="login-input">
+              <label for="username"></label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                autocomplete="off"
+              />
+              <input type="email" autocomplete="off" placeholder="Email" />
+              <input
+                type="password"
+                autocomplete="off"
+                placeholder="Password"
+              />
+              <input
+                type="password"
+                autocomplete="off"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <div class="button">
+              <a href="#">Create Account</a>
             </div>
           </form>
         </div>
@@ -136,16 +119,53 @@
         class="carousel slide"
         data-ride="carousel"
       >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="..." />
+        <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active container-fluid">
+              <h2 class="testimonial-text">
+                <blockquote>
+                  "My client list has nearly doubled in the past month. I'm
+                  already looking to hire another trainer to take over my
+                  evening classes!"
+                </blockquote>
+              </h2>
+
+              <img
+                class="testimonial-image"
+                src="img/dog-img.jpg"
+                alt="dog-profile"
+              />
+            </div>
+            <div class="carousel-item container-fluid">
+              <h2 class="testimonial-text">
+                "Collecting payments for my weekend bootcamp classes at the park
+                used to be a mess. Now my payment system is much more
+                organized!"
+              </h2>
+              <img
+                class="testimonial-image"
+                src="img/lady-img.jpg"
+                alt="lady-profile"
+              />
+              <div class="person-id"></div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="..." />
-          </div>
+          <a
+            class="carousel-control-prev"
+            href="#testimonial-carousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#testimonial-carousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </a>
         </div>
         <a
           class="carousel-control-prev"
@@ -167,8 +187,46 @@
         </a>
       </div>
     </section>
-    <section class="features"></section>
-    <section class="cta"></section>
+    <section class="features">
+      <div class="feature-top">
+        <div class="feature-text">
+          <h3>Payment Collection Service</h3>
+          <p>
+            Take the awkwardness out of the billing process. Bill your clients
+            through our built in service, or direct them towards our premade
+            punch pass system which allows them to purchase sessions with you
+            directly from the app.
+          </p>
+        </div>
+
+        <div class="feature-text">
+          <h3>Personalized Business Profile</h3>
+          <p>
+            Build your business with your personalized trainer profile. Clients
+            can find you by name and location, and can view your profile to
+            learn more about the services you offer.
+          </p>
+        </div>
+      </div>
+      <div class="feature-bottom feature-container">
+        <div class="feature-text">
+          <h3>
+            Attendance Tracking
+          </h3>
+          <p>
+            Keep organized with our client check-in service. Your clients can
+            confirm, check-in, or reschedule thorugh the app. taking the extra
+            work off your hands so you can focus on what you do best.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <h3>Sign up today and simplify your business.</h3>
+      <div>
+        <a href="#hero">Sign Up</a>
+      </div>
+    </section>
     <footer></footer>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

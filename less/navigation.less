@@ -5,20 +5,28 @@
   background: @charcoal-see-thru;
   .padding-top-bottom(0.5%);
 
+  @media screen and @mobile {
+    .flex(row, space-between, center, nowrap);
+  }
+
   .logos {
     .flex(row, flex-start, flex-end, nowrap);
     opacity: 0.8;
 
     img {
       z-index: 2;
-      max-height: 100%;
-      width: 22%;
+      width: 80px;
+      height: auto;
       .padding-sides(2%);
     }
 
     div {
       .flex(column, flex-end, flex-start, nowrap);
       height: 2.5rem;
+
+      @media screen and @mobile {
+        display: none;
+      }
 
       .fitness {
         .big-bold();
@@ -38,6 +46,14 @@
 
     width: 30%;
     margin-right: 5%;
+
+    @media screen and @tablet {
+      width: 50%;
+    }
+
+    @media screen and @mobile {
+      width: 75%;
+    }
 
     a {
       font-size: 1.8rem;

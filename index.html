@@ -20,9 +20,10 @@
       crossorigin="anonymous"
     />
 
-    <title>Document</title>
+    <title>Anwywhere Fitness</title>
   </head>
   <body>
+    <section class='notmodal'>
     <section class="header">
       <nav class="navigation">
         <div class="logos">
@@ -35,47 +36,23 @@
           </div>
         </div>
         <div class="links">
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
           <a href="#">Contact</a>
-          <a href="#">Sign Up</a>
+          <a href="#">Log In</a>
         </div>
       </nav>
       <section class="hero" id="#hero">
-        <div class="form-section">
-          <form class="form" autocomplete="off" action="...">
-            <div class="form-header">
-              <h2>Create your profile now for free</h2>
-            </div>
-            <div class="login-input">
-              <label for="username"></label>
-              <input
-                type="text"
-                name="username"
-                placeholder="Username"
-                autocomplete="off"
-              />
-              <input type="email" autocomplete="off" placeholder="Email" />
-              <input
-                type="password"
-                autocomplete="off"
-                placeholder="Password"
-              />
-              <input
-                type="password"
-                autocomplete="off"
-                placeholder="Confirm Password"
-              />
-            </div>
-            <div class="button">
-              <a href="#">Create Account</a>
-            </div>
-          </form>
+
         </div>
         <div class="hero-text">
           <h1>Take your business</h1>
           <h3><em>Anywhere.</em></h3>
+          <div class='signup-btn'>
+              <a href="#hero">Sign Up</a>
+          </div>
         </div>
+
       </section>
     </section>
     <section class="benefits">
@@ -106,7 +83,7 @@
           <h3>Simplified Marketing</h3>
           <p>
             Do away with outdated flyers and spamming social media. Simply post
-            your class information and let local leads sign up for your class,
+            your class information and let local leads sign up,
             minus the cold-calling and pestering marketing emails.
           </p>
         </div>
@@ -123,15 +100,16 @@
           <div class="carousel-inner">
             <div class="carousel-item active container-fluid">
               <h2 class="testimonial-text">
-                <blockquote>
+              
                   "My client list has nearly doubled in the past month. I'm
                   already looking to hire another trainer to take over my
                   evening classes!"
-                </blockquote>
+              
+                <p>-Steven</p>
               </h2>
 
               <img
-                class="testimonial-image"
+                class="testimonial-image dog"
                 src="img/dog-img.jpg"
                 alt="dog-profile"
               />
@@ -141,10 +119,25 @@
                 "Collecting payments for my weekend bootcamp classes at the park
                 used to be a mess. Now my payment system is much more
                 organized!"
+                <p>-Loreal Kensignton</p>
               </h2>
               <img
                 class="testimonial-image"
                 src="img/lady-img.jpg"
+                alt="lady-profile"
+              />
+              <div class="person-id"></div>
+            </div>
+            <div class="carousel-item container-fluid">
+              <h2 class="testimonial-text">
+                "Collecting payments for my weekend bootcamp classes at the park
+                used to be a mess. Now my payment system is much more
+                organized!"
+                <p>-Jack McDonald</p>
+              </h2>
+              <img
+                class="testimonial-image"
+                src="img/testimonial.png"
                 alt="lady-profile"
               />
               <div class="person-id"></div>
@@ -223,11 +216,47 @@
     </section>
     <section class="cta">
       <h3>Sign up today and simplify your business.</h3>
-      <div>
+      <div class='signup-btn'>
         <a href="#hero">Sign Up</a>
       </div>
     </section>
     <footer></footer>
+  </section>
+    <div class='modalform'>
+      <div class="form-section">
+        <form class="form" autocomplete="off" action="...">
+          <div class="form-header">
+            <h2>Create your profile now for free</h2>
+          </div>
+          <div class="login-input">
+            <label for="username"></label>
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                autocomplete="off"
+              />
+            <input type="email" autocomplete="off" placeholder="Email" />
+            <input
+                type="password"
+                autocomplete="off"
+                placeholder="Password"
+              />
+            <input
+                type="password"
+                autocomplete="off"
+                placeholder="Confirm Password"
+              />
+          </div>
+          <div class="button">
+            <a href="#">Create Account</a>
+          </div>
+          <p class='close-window'>Close Window</p>
+        </form>
+      </div>
+    </div>
+  
+    
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -243,5 +272,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>

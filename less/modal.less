@@ -1,0 +1,140 @@
+.modalform {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+
+  .form-section {
+    display: block;
+    position: relative;
+    left: 32%;
+    width: 50%;
+    animation-name: modalopen;
+    animation-duration: 0.2s;
+
+    @media screen and @tablet {
+      width: 70%;
+      left: 15%;
+    }
+    @media screen and @mobile {
+      width: 80%;
+      left: 10%;
+    }
+
+    @keyframes modalopen {
+      from {
+        transform: scale(0, 0);
+      }
+      to {
+        transform: scale(1, 1);
+      }
+    }
+
+    .form {
+      width: 70%;
+
+      background: @form-color;
+      margin-top: 5%;
+      .padding-top-bottom(8%);
+      border-radius: 20px;
+      .flex(column, flex-start, center, nowrap);
+      box-shadow: 4px 3px 14px 0px rgba(0, 0, 0, 0.7);
+
+      @media screen and @tablet {
+        .flex(column, center, center, nowrap);
+        margin: 2% auto;
+      }
+
+      .form-header {
+        margin-top: 10%;
+        width: 90%;
+        @media screen and @tablet {
+          text-align: center;
+          margin: auto;
+        }
+        h2 {
+          font-size: 2rem;
+          font-family: @montserrat;
+          font-weight: bold;
+          color: @charcoal;
+          text-align: center;
+          color: darken(@graphite, 10%);
+        }
+        h3 {
+          font-size: 1.5rem;
+          font-family: @montserrat;
+          color: lighten(@charcoal, 10%);
+        }
+      }
+
+      input[type="text"] {
+        .form-font();
+        @media screen and @mobile {
+          .form-font-sm();
+        }
+      }
+
+      input[type="email"] {
+        .form-font();
+        @media screen and @mobile {
+          .form-font-sm();
+        }
+      }
+
+      input[type="password"] {
+        .form-font();
+        @media screen and @mobile {
+          .form-font-sm();
+        }
+      }
+
+      .login-input {
+        .flex(column, center, flex-start, nowrap);
+        width: 90%;
+        input {
+          margin: 1rem auto;
+          padding-left: 1%;
+          height: 2.5rem;
+          width: 90%;
+          border-radius: 3px;
+          border: none;
+        }
+      }
+
+      .button {
+        background: @candycorn;
+        width: 15rem;
+        height: 3rem;
+        border-radius: 3px;
+        text-decoration: none;
+        .flex(row, center, center, nowrap);
+        margin-top: 5%;
+        &:hover {
+          background: darken(@candycorn, 10%);
+        }
+
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: @flat-white;
+          font-family: @roboto;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    p {
+      padding-top: 5%;
+      color: @charcoal;
+      &:hover {
+        color: darken(@charcoal, 25%);
+        cursor: pointer;
+      }
+    }
+  }
+}

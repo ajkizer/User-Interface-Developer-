@@ -100,92 +100,126 @@
 }
 
 .testimonials {
-  background: @charcoal;
-  padding: 8% 0;
-  max-height: 500px;
-  .flex(row, center, center, wrap);
-  @media screen and @mobile {
-    max-height: 305px;
-  }
-  .testimonial-text {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 1.5;
-    color: lighten(@graphite, 50%);
-    margin: 0 10%;
-    padding: 0 10%;
-    text-align: center;
-    line-height: 1.2;
-    letter-spacing: 1px;
+  .flex(column, flex-end, center, no-wrap);
+  background: darken(@charcoal, 10%);
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 
-    @media screen and @mobile {
-      font-size: 1.8rem;
-      padding: 0;
-    }
-    p {
-      font-family: @roboto;
-      font-size: 1rem;
-      margin-top: 1.5%;
-    }
-  }
-
-  .testimonial-image {
-    width: 15%;
-    border-radius: 100%;
-    margin-left: 42%;
-    margin-top: 5%;
-    @media screen and @mobile {
-      width: 25%;
-      margin-left: 39%;
-    }
-  }
-}
-
-.features {
-  background: @flat-white;
-}
-
-.features {
-  .flex(column, space-between, center, nowrap);
-  .padding-top-bottom(10%);
-  .feature-top {
-    width: 75%;
-    .flex(row, space-between, center, nowrap);
-    .feature-text {
-      padding: 0 5%;
-
-      @media screen and @tablet {
-        padding: 3% 0;
-        text-align: center;
-      }
-
-      h3 {
-        font-size: 2.5rem;
-        font-weight: bold;
-      }
-      p {
-        font-size: 1.5rem;
-      }
-    }
+  .quote-container {
+    width: 50%;
     @media screen and @tablet {
-      .flex(column, space-between, center, nowrap);
+      width: 70%;
+      text-align: center;
     }
-  }
-  .feature-bottom {
-    padding-top: 5%;
-    width: 38%;
-    margin: auto;
-    text-align: center;
-    h3 {
-      font-size: 2.5rem;
-      font-weight: bold;
+    @media screen and @mobile {
+      width: 90%;
+    }
+
+    img {
+      width: 35%;
+      border-radius: 50%;
     }
     p {
+      width: 80%;
       font-size: 1.5rem;
+      color: lighten(@graphite, 70%);
+      padding-left: 3%;
+      font-family: @montserrat;
+      font-style: italic;
+      @media screen and @tablet {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 2rem;
+      }
     }
+  }
+
+  .testimonial-top {
+    .flex(row, space-between, center, nowrap);
     @media screen and @tablet {
-      width: 75%;
-      padding-top: 3%;
+      .flex(column, center, center, nowrap);
+    }
+    .quote-one,
+    .quote-three {
+      .flex(row, flex-start, center, nowrap);
+      @media screen and @tablet {
+        .flex(column, center, center, nowrap);
+        padding-top: 7%;
+      }
+    }
+    .quote-one {
+      margin-right: 5%;
+      @media screen and @tablet {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.quote-two {
+  .flex(row, space-between, center, nowrap);
+
+  padding-top: 5%;
+  margin-left: 10%;
+  @media screen and @tablet {
+    .flex(column, center, center, nowrap);
+    padding-top: 7%;
+    margin-left: 0;
+  }
+}
+
+.features-container {
+  padding: 5%;
+  .flex(row, flex-start, center, nowrap);
+  @media screen and @tablet {
+    .flex(column-reverse, center, center, nowrap);
+  }
+  .feature-img {
+    width: 50%;
+    @media screen and @tablet {
+      width: 80%;
+      padding: 5%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .feature-text {
+    width: 50%;
+    @media screen and @tablet {
+      width: 100%;
+      padding-top: 10%;
+    }
+    .flex(column, space-around, flex-start, nowrap);
+
+    .feature-cat-container {
+      .flex(row, flex-start, center, nowrap);
+      @media screen and @tablet {
+        width: 100%;
+        padding-bottom: 10%;
+      }
+      padding-left: 5%;
+      .feature-cat {
+        padding: 5%;
+        @media screen and @tablet-lg {
+          padding: 2% 5%;
+        }
+        h3 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          @media screen and (max-width: 1150px) {
+            font-size: 2.2rem;
+          }
+        }
+        p {
+          @media screen and (max-width: 1150px) {
+            font-size: 1.3rem;
+          }
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -194,7 +228,7 @@
   background: @charcoal;
   color: white;
   .flex(column, center, center, nowrap);
-  padding: 10% 0%;
+  padding: 8% 0% 3%;
   h3 {
     font-size: 3rem;
     @media screen and @tablet {
@@ -203,12 +237,16 @@
   }
   div {
     background: @candycorn;
-    width: 15rem;
-    height: 3rem;
+    width: 18rem;
+    height: 4rem;
     border-radius: 3px;
     text-decoration: none;
     .flex(row, center, center, nowrap);
     margin-top: 5%;
+    &:hover {
+      background: darken(@candycorn, 12%);
+      cursor: pointer;
+    }
 
     a {
       font-size: 1.5rem;
@@ -217,6 +255,20 @@
       font-family: @roboto;
       font-weight: bold;
       letter-spacing: 1px;
+    }
+  }
+}
+
+footer {
+  .flex(row, flex-end, center, nowrap);
+  background: @charcoal;
+  color: lighten(@graphite, 70%);
+  p {
+    margin-bottom: 0;
+    margin-left: 46%;
+
+    .terms {
+      padding-left: 60%;
     }
   }
 }

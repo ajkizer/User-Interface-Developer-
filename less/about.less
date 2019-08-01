@@ -56,15 +56,29 @@
       }
       .card-container {
         .flex(column, center, center, nowrap);
+
         width: 33%;
         text-align: center;
+        transition: ease-in-out;
+        transition-duration: 0.08s;
+        &:hover {
+          transform: scale(1.05, 1.05);
+          text-decoration: none;
+        }
         @media screen and @mobile {
           width: 70%;
           padding: 7% 0;
         }
+        a {
+          width: 100%;
+          height: 100%;
+          color: @charcoal;
+          text-decoration: none;
+        }
         img {
           width: 50%;
           border-radius: 50%;
+          padding-bottom: 1%;
         }
         h4 {
           color: @charcoal;
@@ -93,9 +107,25 @@
         width: 33%;
         .flex(column, center, center, nowrap);
         text-align: center;
+        transition: ease-in-out;
+        transition-duration: 0.08s;
+        &:hover {
+          transform: scale(1.05, 1.05);
+        }
         @media screen and @mobile {
           width: 70%;
           padding: 7% 0;
+        }
+        @media screen and @mobile {
+          width: 70%;
+          padding: 7% 0;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+          color: @charcoal;
+          text-decoration: none;
         }
         img {
           width: 65%;

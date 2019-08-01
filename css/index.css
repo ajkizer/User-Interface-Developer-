@@ -240,6 +240,9 @@ body {
 .navigation .links a:hover {
   color: #808e8b;
 }
+footer {
+  padding-top: 5%;
+}
 .header {
   background-image: url(/img/fitness.jpeg);
   background-size: cover;
@@ -587,7 +590,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .cta div:hover {
   background: #d82f00;
@@ -600,22 +603,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-}
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: nowrap;
-  background: #1f2322;
-  color: #ffffff;
-}
-footer p {
-  margin-bottom: 0;
-  margin-left: 46%;
-}
-footer p .terms {
-  padding-left: 60%;
 }
 .modalform {
   display: none;
@@ -881,6 +868,13 @@ footer p .terms {
   flex-wrap: nowrap;
   width: 33%;
   text-align: center;
+  transition: ease-in-out;
+  transition-duration: 0.08s;
+}
+.about-main .about-team .about-top .card-container:hover,
+.about-main .about-team .about-bottom .card-container:hover {
+  transform: scale(1.05, 1.05);
+  text-decoration: none;
 }
 @media screen and (max-width: 600px) {
   .about-main .about-team .about-top .card-container,
@@ -889,10 +883,18 @@ footer p .terms {
     padding: 7% 0;
   }
 }
+.about-main .about-team .about-top .card-container a,
+.about-main .about-team .about-bottom .card-container a {
+  width: 100%;
+  height: 100%;
+  color: #1f2322;
+  text-decoration: none;
+}
 .about-main .about-team .about-top .card-container img,
 .about-main .about-team .about-bottom .card-container img {
   width: 50%;
   border-radius: 50%;
+  padding-bottom: 1%;
 }
 .about-main .about-team .about-top .card-container h4,
 .about-main .about-team .about-bottom .card-container h4 {
@@ -938,12 +940,29 @@ footer p .terms {
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
+  transition: ease-in-out;
+  transition-duration: 0.08s;
+}
+.about-main .about-team .about-mid .card-container:hover {
+  transform: scale(1.05, 1.05);
 }
 @media screen and (max-width: 600px) {
   .about-main .about-team .about-mid .card-container {
     width: 70%;
     padding: 7% 0;
   }
+}
+@media screen and (max-width: 600px) {
+  .about-main .about-team .about-mid .card-container {
+    width: 70%;
+    padding: 7% 0;
+  }
+}
+.about-main .about-team .about-mid .card-container a {
+  width: 100%;
+  height: 100%;
+  color: #1f2322;
+  text-decoration: none;
 }
 .about-main .about-team .about-mid .card-container img {
   width: 65%;

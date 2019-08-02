@@ -212,12 +212,27 @@
           @media screen and (max-width: 1150px) {
             font-size: 2.2rem;
           }
+          @media screen and @tablet {
+            font-size: 2.5rem;
+          }
+
+          @media screen and @mobile {
+            font-size: 2.25rem;
+          }
         }
         p {
           @media screen and (max-width: 1150px) {
             font-size: 1.3rem;
           }
+
+          @media screen and @tablet {
+            font-size: 1.7rem;
+          }
           font-size: 1.5rem;
+        }
+
+        @media screen and @mobile {
+          font-size: 1.35rem;
         }
       }
     }

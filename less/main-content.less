@@ -2,7 +2,274 @@
   background-image: url(/img/fitness.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   background-position: center;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
+}
+
+.hero {
+  .flex(row, center, center, nowrap);
+  @media screen and @tablet {
+    .flex(column-reverse, center, center, nowrap);
+  }
+  z-index: 0;
+  padding: 10% 5%;
+
+  .hero-text {
+    font-family: @montserrat;
+    margin-bottom: 10%;
+    @media screen and @tablet {
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 5.5rem;
+      font-weight: bold;
+      color: @flat-white;
+    }
+
+    h3 {
+      font-size: 6.5rem;
+      font-weight: bold;
+      color: @flat-white;
+      padding-bottom: 10%;
+    }
+    div {
+      margin: auto;
+      background: @candycorn;
+      width: 18rem;
+      height: 5rem;
+      border-radius: 3px;
+      text-decoration: none;
+      .flex(row, center, center, nowrap);
+      margin-top: 5%;
+      &:hover {
+        background: darken(@candycorn, 12%);
+        cursor: pointer;
+      }
+
+      a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: @flat-white;
+        font-family: @roboto;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.benefits {
+  background: @flat-white;
+  .flex(row, space-around, center, nowrap);
+  padding: 12% 8%;
+
+  @media screen and @tablet {
+    .flex(column, space-around, center, nowrap);
+  }
+
+  .benefit-card {
+    width: 30%;
+    height: 45%;
+    margin: 0 2%;
+    .flex(column, space-between, center, nowrap);
+    @media screen and @tablet {
+      width: 70%;
+      padding: 8% 0;
+    }
+
+    .benefit-text {
+      .flex(column, center, center, nowrap);
+      padding-top: 5%;
+      h3 {
+        font-size: 2.1rem;
+        font-weight: bold;
+        font-family: @montserrat;
+        text-align: center;
+        padding-bottom: 3%;
+      }
+      p {
+        font-size: 1.5rem;
+        font-family: @montserrat;
+        text-align: center;
+        padding-bottom: 2%;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+.testimonials {
+  .flex(column, flex-end, center, no-wrap);
+  background: darken(@charcoal, 10%);
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  .quote-container {
+    width: 50%;
+    @media screen and @tablet {
+      width: 70%;
+      text-align: center;
+    }
+    @media screen and @mobile {
+      width: 90%;
+    }
+
+    img {
+      width: 35%;
+      border-radius: 50%;
+    }
+    p {
+      width: 80%;
+      font-size: 1.5rem;
+      color: lighten(@graphite, 70%);
+      padding-left: 3%;
+      font-family: @montserrat;
+      font-style: italic;
+      @media screen and @tablet {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .testimonial-top {
+    .flex(row, space-between, center, nowrap);
+    @media screen and @tablet {
+      .flex(column, center, center, nowrap);
+    }
+    .quote-one,
+    .quote-three {
+      .flex(row, flex-start, center, nowrap);
+      @media screen and @tablet {
+        .flex(column, center, center, nowrap);
+        padding-top: 7%;
+      }
+    }
+    .quote-one {
+      margin-right: 5%;
+      @media screen and @tablet {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.quote-two {
+  .flex(row, space-between, center, nowrap);
+
+  padding-top: 5%;
+  margin-left: 10%;
+  @media screen and @tablet {
+    .flex(column, center, center, nowrap);
+    padding-top: 7%;
+    margin-left: 0;
+  }
+}
+
+.features-container {
+  padding: 5%;
+  .flex(row, flex-start, center, nowrap);
+  @media screen and @tablet {
+    .flex(column-reverse, center, center, nowrap);
+  }
+  .feature-img {
+    width: 50%;
+    @media screen and @tablet {
+      width: 80%;
+      padding: 5%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .feature-text {
+    width: 50%;
+    @media screen and @tablet {
+      width: 100%;
+      padding-top: 10%;
+    }
+    .flex(column, space-around, flex-start, nowrap);
+
+    .feature-cat-container {
+      .flex(row, flex-start, center, nowrap);
+      @media screen and @tablet {
+        width: 100%;
+        padding-bottom: 10%;
+      }
+      padding-left: 5%;
+      .feature-cat {
+        padding: 5%;
+        @media screen and @tablet-lg {
+          padding: 2% 5%;
+        }
+        h3 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          @media screen and (max-width: 1150px) {
+            font-size: 2.2rem;
+          }
+          @media screen and @tablet {
+            font-size: 2.5rem;
+          }
+
+          @media screen and @mobile {
+            font-size: 2.25rem;
+          }
+        }
+        p {
+          @media screen and (max-width: 1150px) {
+            font-size: 1.3rem;
+          }
+
+          @media screen and @tablet {
+            font-size: 1.7rem;
+          }
+          font-size: 1.5rem;
+        }
+
+        @media screen and @mobile {
+          font-size: 1.35rem;
+        }
+      }
+    }
+  }
+}
+
+.cta {
+  background: @charcoal;
+  color: white;
+  .flex(column, center, center, nowrap);
+  padding: 8% 0% 3%;
+  h3 {
+    font-size: 3rem;
+    @media screen and @tablet {
+      text-align: center;
+    }
+  }
+  div {
+    background: @candycorn;
+    width: 18rem;
+    height: 4rem;
+    border-radius: 3px;
+    text-decoration: none;
+    .flex(row, center, center, nowrap);
+    margin-top: 2%;
+    &:hover {
+      background: darken(@candycorn, 12%);
+      cursor: pointer;
+    }
+
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: @flat-white;
+      font-family: @roboto;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
 }
